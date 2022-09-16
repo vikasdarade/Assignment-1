@@ -8,7 +8,8 @@ pipeline {
 	stages {
 		stage ('copy data') {
 			steps {
-				sh "echo 'hii this is me'"
+				sh "chmod -R 777 /mnt"
+				sh "docker cp /mnt/ASSIGNMENT/22Q1/index.html 35dc47aa3c45:/usr/local/apache2/htdocs'"
 			}
 		}
 	}
